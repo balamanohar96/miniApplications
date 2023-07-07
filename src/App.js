@@ -22,7 +22,6 @@ function App() {
           <Route exact path="/third" element={<Third></Third>} />
           <Route exact path="/fourth" element={<Fourth></Fourth>} />
           <Route exact path="/fifth" element={<Fifth></Fifth>} />
-          {/* <Route exact path="/todo" element={<TodoApp></TodoApp>} /> */}
         </Routes>
       </BrowserRouter>
     </>

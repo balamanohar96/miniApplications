@@ -9,7 +9,6 @@ function Home() {
       <Link to="/third">name search</Link>
       <Link to="/fourth">copy inputs</Link>
       <Link to="/fifth">To-Do</Link>
-      {/* <Link to="/todo">To do app</Link> */}
     </div>
   );
 }
