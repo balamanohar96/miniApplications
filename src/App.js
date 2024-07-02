@@ -8,6 +8,7 @@ import FullName from "./components/FullName";
 import ToDo from "./components/ToDo";
 import DynamicDropdown from "./components/DynamicDropdown";
 import HoveredDropdown from "./components/HoveredDropdown";
+import ScrollBtns from "./components/ScrollBtns"
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route exact path="/todo" element={<ToDo></ToDo>} />
           <Route exact path="/dynamicDropdown" element={<DynamicDropdown />} />
           <Route exact path="/hoveredDropdown" element={<HoveredDropdown />} />
+          <Route exact path="/scroll" element={<ScrollBtns />} />
         </Routes>
       </BrowserRouter>
     </>

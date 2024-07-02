@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div>
+    <div className="navbar">
       <Link className="nav-item" to="/counter">
         Counter
       </Link>
@@ -24,6 +24,9 @@ function Home() {
       </Link>
       <Link className="nav-item" to="/hoveredDropdown">
         Hovered DropDown
+      </Link>
+      <Link className="nav-item" to="/scroll">
+        Scroll
       </Link>
     </div>
   );
