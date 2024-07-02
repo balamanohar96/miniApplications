@@ -21,9 +21,10 @@ function Fifth() {
   };
 
   let completed = (id) => {
-    let index = todoList.findIndex((each) => each.id === id);
     let newTodoList = [...todoList];
-    newTodoList[index] = { ...newTodoList[index], isCompleted: true };
+    let index = todoList.findIndex((each) => each.id === id);
+    let reqTodo = newTodoList[index];
+    newTodoList[index] = { ...reqTodo, isCompleted: !reqTodo.isCompleted };
     setTodoList(newTodoList);
   };
 
@@ -34,7 +35,7 @@ function Fifth() {
 
   return (
     <div className="para second">
-      <p>this is fifth page, it has To-Do list</p>
+      <p>To-Do Application</p>
       <input
         type="text"
         onChange={changeHandler}
@@ -50,7 +51,12 @@ function Fifth() {
               key={eachTodo.id}
             >
               <span>{eachTodo.value}</span>
-              <button onClick={() => completed(eachTodo.id)}>completed</button>
+              <button
+                style={{ width: "100px", margin: "0 10px" }}
+                onClick={() => completed(eachTodo.id)}
+              >
+                {eachTodo.isCompleted ? "Incomplete" : "Completed"}
+              </button>
               <button onClick={() => deleted(eachTodo.id)}>delete</button>
             </li>
           );

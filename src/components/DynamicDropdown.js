@@ -37,7 +37,7 @@ const Sixth = () => {
 
   return (
     <div className="third para">
-      <p>This is sixth page, Please select a country and a state</p>
+      <p>States are loaded based on the selected Country</p>
       <div>
         <label htmlFor="country">Country :</label>
         <select id="country" value={country} onChange={countryChangeHandler}>

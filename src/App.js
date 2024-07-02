@@ -1,29 +1,30 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import First from "./components/First";
+import Counter from "./components/Counter";
 import Home from "./components/Home";
-import Second from "./components/Second";
-import Third from "./components/Third";
-import Fourth from "./components/Fourth";
-import Fifth from "./components/Fifth";
-import Sixth from "./components/Sixth";
-import Seventh from "./components/Seventh";
+import NamesList from "./components/NamesList";
+import NameSearch from "./components/NameSearch";
+import FullName from "./components/FullName";
+import ToDo from "./components/ToDo";
+import DynamicDropdown from "./components/DynamicDropdown";
+import HoveredDropdown from "./components/HoveredDropdown";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <h2 className="main-heading">welcome to react after many days.</h2>
+
         <Home />
 
         <Routes>
-          <Route exact path="/first" element={<First></First>} />
-          <Route exact path="/second" element={<Second></Second>} />
-          <Route exact path="/third" element={<Third></Third>} />
-          <Route exact path="/fourth" element={<Fourth></Fourth>} />
-          <Route exact path="/fifth" element={<Fifth></Fifth>} />
-          <Route exact path="/sixth" element={<Sixth />} />
-          <Route exact path="/seventh" element={<Seventh />} />
+          <Route exact path="/counter" element={<Counter />} />
+          <Route exact path="/names" element={<NamesList />} />
+          <Route exact path="/namesearch" element={<NameSearch></NameSearch>} />
+          <Route exact path="/fullName" element={<FullName />} />
+          <Route exact path="/todo" element={<ToDo></ToDo>} />
+          <Route exact path="/dynamicDropdown" element={<DynamicDropdown />} />
+          <Route exact path="/hoveredDropdown" element={<HoveredDropdown />} />
         </Routes>
       </BrowserRouter>
     </>

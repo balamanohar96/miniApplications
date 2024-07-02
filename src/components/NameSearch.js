@@ -27,7 +27,7 @@ function Third() {
   return (
     <>
       <div className="para third">
-        <p>this is third page, it contains search application</p>
+        <p>search by name</p>
         <input onChange={eventHandler} type="text"></input>
         {matchingArr.map((each, i) => {
           return <li key={i}>{each}</li>;

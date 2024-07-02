@@ -6,17 +6,16 @@ function Fourth() {
   let [isShow, setIsShow] = useState(false);
 
   let gohandler = () => {
-    setFullname(
-      `your full name is ${namesobj.firstname} ${namesobj.secondname}`
-    );
-    setIsShow(true);
+    if (namesobj.firstname.trim() !== "" && namesobj.secondname.trim() !== "") {
+      setFullname(
+        `your full name is ${namesobj.firstname} ${namesobj.secondname}`
+      );
+      setIsShow(true);
+    }
   };
   return (
     <div className="first para">
-      <p>
-        This is fourth page, In this page, when "submit" button is clicked,
-        fullName is printed below
-      </p>
+      <p>when button is clicked, fullName is printed below</p>
       <input
         type="text"
         placeholder="first name"
@@ -34,9 +33,7 @@ function Fourth() {
         }}
       ></input>
       <button onClick={gohandler}>submit</button>
-      {namesobj.firstname && namesobj.secondname && isShow && (
-        <h4>{fullname}</h4>
-      )}
+      {isShow && <h4>{fullname}</h4>}
     </div>
   );
 }
